@@ -78,6 +78,16 @@ body {
     cursor: pointer;
 }
 
+.mobile-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--dark);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+    margin-right: 1rem;
+}
+
 .sidebar-nav {
     flex: 1;
     padding: 1rem 0;
@@ -586,15 +596,98 @@ body {
 }
 
 
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
     .sidebar {
         left: -280px;
+        width: 280px; /* Force full width on mobile when open */
     }
+    
     .sidebar.mobile-open {
         left: 0;
+        box-shadow: 10px 0 50px rgba(0,0,0,0.3);
     }
+
+    /* Prevent collapse on mobile, always show full when open */
+    .sidebar.collapsed {
+        width: 280px; 
+    }
+    
+    .sidebar.collapsed .logo span,
+    .sidebar.collapsed .nav-link span,
+    .sidebar.collapsed .submenu-toggle {
+        display: block;
+    }
+
+    .sidebar.collapsed .logo {
+        display: flex;
+    }
+
+    .sidebar.collapsed .nav-link {
+        justify-content: flex-start;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .sidebar.collapsed .sidebar-header {
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+
     .main-wrapper {
         margin-left: 0 !important;
+    }
+
+    .search-box {
+        width: 200px;
+    }
+
+    .mobile-toggle-btn {
+        display: block; /* Show on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0 1rem;
+    }
+
+    .search-box {
+        display: none; /* Hide search on very small screens or make it an icon */
+    }
+
+    .welcome-banner {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    .welcome-banner h1 {
+        font-size: 1.75rem;
+    }
+
+    .settings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-info span {
+        display: none; /* Hide name, keep avatar */
+    }
+}
+
+@media (max-width: 576px) {
+    .content-container {
+        padding: 1rem;
+    }
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .welcome-banner {
+        padding: 1.5rem;
+        text-align: center;
     }
 }

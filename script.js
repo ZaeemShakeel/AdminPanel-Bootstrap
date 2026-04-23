@@ -1,18 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const toggleBtn = document.getElementById('toggle-sidebar');
+    const mobileToggleBtn = document.getElementById('mobile-toggle');
     const navLinks = document.querySelectorAll('.nav-link[data-target], .submenu-link[data-target]');
     const sections = document.querySelectorAll('.content-section');
 
-    // Sidebar Toggle
-    toggleBtn.addEventListener('click', () => {
+    // Sidebar Toggle Function
+    const toggleSidebar = () => {
         sidebar.classList.toggle('collapsed');
         
         // Mobile handling
         if (window.innerWidth <= 992) {
             sidebar.classList.toggle('mobile-open');
         }
-    });
+    };
+
+    toggleBtn.addEventListener('click', toggleSidebar);
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', toggleSidebar);
+    }
 
     // Content Switching
     navLinks.forEach(link => {
