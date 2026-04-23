@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebExcels | Modern Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+                <span>WebExcels</span>
+            </div>
+            <button class="toggle-btn" id="toggle-sidebar">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-target="dashboard">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+
+                <!-- Website Settings Dropdown -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="website-settings">
+                            <i class="bi bi-gear-fill"></i>
+                            <span>Website Settings</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#websiteSettingsCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="websiteSettingsCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="website-settings">All Settings</a></li>
+                            <li><a href="#" class="submenu-link">Themes</a></li>
+                            <li><a href="#" class="submenu-link">Theme Banner</a></li>
+                            <li><a href="#" class="submenu-link">Home Products</a></li>
+                            <li><a href="#" class="submenu-link">About Us Page</a></li>
+                            <li><a href="#" class="submenu-link">Privacy Policy</a></li>
+                            <li><a href="#" class="submenu-link">SEO Tags</a></li>
+                            <li><a href="#" class="submenu-link">Media Categories</a></li>
+                            <li><a href="#" class="submenu-link">Accounting Setup</a></li>
+                            <li><a href="#" class="submenu-link">Brand Logos</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Accounts Dropdown -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="accounts-overview">
+                            <i class="bi bi-wallet2"></i>
+                            <span>Accounts</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#accountsCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="accountsCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="accounts-overview">All Accounts</a></li>
+                            <li><a href="#" class="submenu-link">Customer</a></li>
+                            <li><a href="#" class="submenu-link">Vendor</a></li>
+                            <li class="has-nested">
+                                <div class="submenu-link-wrapper">
+                                    <a href="javascript:void(0)" class="submenu-link" data-target="income-overview">
+                                        <i class="bi bi-plus-circle"></i>
+                                        <span>Income</span>
+                                    </a>
+                                    <button class="submenu-toggle-mini" data-bs-toggle="collapse" data-bs-target="#incomeCollapse">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse" id="incomeCollapse">
+                                    <ul class="nested-submenu">
+                                        <li><a href="#" class="submenu-link">Invoice</a></li>
+                                        <li><a href="#" class="submenu-link">Revenue</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-nested">
+                                <div class="submenu-link-wrapper">
+                                    <a href="javascript:void(0)" class="submenu-link" data-target="expense-overview">
+                                        <i class="bi bi-dash-circle"></i>
+                                        <span>Expense</span>
+                                    </a>
+                                    <button class="submenu-toggle-mini" data-bs-toggle="collapse" data-bs-target="#expenseCollapse">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse" id="expenseCollapse">
+                                    <ul class="nested-submenu">
+                                        <li><a href="#" class="submenu-link">Bill</a></li>
+                                        <li><a href="#" class="submenu-link">Payment</a></li>
+                                        <li><a href="#" class="submenu-link">Debit Note</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item mt-auto">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-wrapper">
+        <!-- Header -->
+        <header class="top-bar">
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search anything...">
+            </div>
+            <div class="user-profile">
+                <div class="notifications">
+                    <i class="bi bi-bell"></i>
+                    <span class="badge">3</span>
+                </div>
+                <div class="profile-info">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=6366f1&color=fff" alt="User">
+                    <span>Admin User</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-container">
+            <!-- Dashboard Overview (Default) -->
+            <section id="dashboard" class="content-section active">
+                <div class="welcome-banner">
+                    <h1>Welcome back, Admin! 👋</h1>
+                    <p>Here's what's happening with your platform today.</p>
+                </div>
+                
+                <div class="row g-4 mt-2">
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="icon-box blue"><i class="bi bi-people"></i></div>
+                            <div class="stat-info">
+                                <h3>1,284</h3>
+                                <p>Total Users</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="icon-box purple"><i class="bi bi-bag-check"></i></div>
+                            <div class="stat-info">
+                                <h3>$45,210</h3>
+                                <p>Total Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="icon-box green"><i class="bi bi-graph-up-arrow"></i></div>
+                            <div class="stat-info">
+                                <h3>+12.5%</h3>
+                                <p>Growth Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-card">
+                            <div class="icon-box orange"><i class="bi bi-chat-dots"></i></div>
+                            <div class="stat-info">
+                                <h3>86</h3>
+                                <p>New Inquiries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Website Settings Section -->
+            <section id="website-settings" class="content-section">
+                <div class="section-header">
+                    <h2>Website Settings</h2>
+                    <p>Manage your website configurations and content.</p>
+                </div>
+
+                <div class="settings-grid">
+                    <!-- Cards will be rendered here -->
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Themes</h3>
+                            <button class="web-setting-btn"><i class="bi bi-palette"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Theme Banner</h3>
+                            <button class="web-setting-btn"><i class="bi bi-image"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Home Products</h3>
+                            <button class="web-setting-btn"><i class="bi bi-cart3"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">About Us Page</h3>
+                            <button class="web-setting-btn"><i class="bi bi-file-person"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Privacy Policy</h3>
+                            <button class="web-setting-btn"><i class="bi bi-shield-lock"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">SEO Tags</h3>
+                            <button class="web-setting-btn"><i class="bi bi-search-heart"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Media Categories</h3>
+                            <button class="web-setting-btn"><i class="bi bi-collection"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Accounting Setup</h3>
+                            <button class="web-setting-btn"><i class="bi bi-calculator"></i> Manage</button>
+                        </div>
+                    </div>
+                    <div class="web-setting-card">
+                        <div class="web-setting-bg" style="background-image: url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800')"></div>
+                        <div class="web-setting-content">
+                            <h3 class="web-setting-title">Brand Logos</h3>
+                            <button class="web-setting-btn"><i class="bi bi-briefcase"></i> Manage</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accounts Section -->
+            <section id="accounts-overview" class="content-section">
+                <div class="section-header">
+                    <h2>Accounts & Financials</h2>
+                    <p>Comprehensive management of your business entities and transactions.</p>
+                </div>
+
+                <div class="settings-grid">
+                    <!-- Main Entities -->
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #6366f1 0%, #a855f7 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-people-fill"></i>
+                            <h3 class="account-title">Customers</h3>
+                            <p class="account-desc">Directory and client history</p>
+                            <button class="account-btn">View All</button>
+                        </div>
+                    </div>
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-truck"></i>
+                            <h3 class="account-title">Vendors</h3>
+                            <p class="account-desc">Supplier and partner management</p>
+                            <button class="account-btn">View All</button>
+                        </div>
+                    </div>
+
+                    <!-- Income Sub-items -->
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #10b981 0%, #059669 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <h3 class="account-title">Invoices</h3>
+                            <p class="account-desc">Manage sales and billing</p>
+                            <button class="account-btn">Open Invoices</button>
+                        </div>
+                    </div>
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-graph-up"></i>
+                            <h3 class="account-title">Revenue</h3>
+                            <p class="account-desc">Track incoming cash flow</p>
+                            <button class="account-btn">Statistics</button>
+                        </div>
+                    </div>
+
+                    <!-- Expense Sub-items -->
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-receipt"></i>
+                            <h3 class="account-title">Bills</h3>
+                            <p class="account-desc">Manage payable invoices</p>
+                            <button class="account-btn">Manage Bills</button>
+                        </div>
+                    </div>
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-cash-coin"></i>
+                            <h3 class="account-title">Payments</h3>
+                            <p class="account-desc">Outgoing transactions</p>
+                            <button class="account-btn">History</button>
+                        </div>
+                    </div>
+                    <div class="account-card" style="background-image: linear-gradient(135deg, #64748b 0%, #475569 100%)">
+                        <div class="account-content">
+                            <i class="bi bi-file-earmark-minus"></i>
+                            <h3 class="account-title">Debit Note</h3>
+                            <p class="account-desc">Purchase returns and credits</p>
+                            <button class="account-btn">Records</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
