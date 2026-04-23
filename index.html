@@ -36,7 +36,86 @@
                     </a>
                 </li>
 
-                <!-- Website Settings Dropdown -->
+                <!-- HRM System -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="hrm-system">
+                            <i class="bi bi-people-fill"></i>
+                            <span>HRM System</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#hrmCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="hrmCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="hrm-system">Employee Setup</a></li>
+                            <li class="has-nested">
+                                <div class="submenu-link-wrapper">
+                                    <a href="javascript:void(0)" class="submenu-link" data-target="hrm-system">
+                                        <i class="bi bi-cash-stack"></i>
+                                        <span>Payroll Setup</span>
+                                    </a>
+                                    <button class="submenu-toggle-mini" data-bs-toggle="collapse" data-bs-target="#payrollCollapse">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse" id="payrollCollapse">
+                                    <ul class="nested-submenu">
+                                        <li><a href="#" class="submenu-link" data-target="hrm-system">Set Salary</a></li>
+                                        <li><a href="#" class="submenu-link" data-target="hrm-system">Payslip</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-nested">
+                                <div class="submenu-link-wrapper">
+                                    <a href="javascript:void(0)" class="submenu-link" data-target="hrm-system">
+                                        <i class="bi bi-calendar-check"></i>
+                                        <span>Leave Management</span>
+                                    </a>
+                                    <button class="submenu-toggle-mini" data-bs-toggle="collapse" data-bs-target="#leaveCollapse">
+                                        <i class="bi bi-chevron-down"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse" id="leaveCollapse">
+                                    <ul class="nested-submenu">
+                                        <li><a href="#" class="submenu-link" data-target="hrm-system">Manage Leave</a></li>
+                                        <li><a href="#" class="submenu-link" data-target="hrm-system">Attendance</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#" class="submenu-link" data-target="hrm-system">HRM System Setup</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Production -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="production">
+                            <i class="bi bi-box-seam-fill"></i>
+                            <span>Production</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#prodCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="prodCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="production">Production Orders</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Create Catalog -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="create-catalog">
+                        <i class="bi bi-journal-plus"></i>
+                        <span>Create Catalog</span>
+                    </a>
+                </li>
+
+                <!-- Website Settings -->
                 <li class="nav-item">
                     <div class="nav-link-wrapper">
                         <a href="javascript:void(0)" class="nav-link" data-target="website-settings">
@@ -59,6 +138,46 @@
                             <li><a href="#" class="submenu-link">Media Categories</a></li>
                             <li><a href="#" class="submenu-link">Accounting Setup</a></li>
                             <li><a href="#" class="submenu-link">Brand Logos</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- User Management -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="user-management">
+                            <i class="bi bi-person-gear"></i>
+                            <span>User Management</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#userCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="userCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="user-management">User</a></li>
+                            <li><a href="#" class="submenu-link" data-target="user-management">User Logs</a></li>
+                            <li><a href="#" class="submenu-link" data-target="user-management">Role</a></li>
+                            <li><a href="#" class="submenu-link" data-target="user-management">Client</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Production System -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="production-system">
+                            <i class="bi bi-cpu-fill"></i>
+                            <span>Production System</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#prodSystemCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="prodSystemCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="production-system">Products & Services</a></li>
+                            <li><a href="#" class="submenu-link" data-target="production-system">Products Stock</a></li>
                         </ul>
                     </div>
                 </li>
@@ -118,6 +237,56 @@
                     </div>
                 </li>
 
+                <!-- POS System -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="pos-system">
+                            <i class="bi bi-cart-fill"></i>
+                            <span>POS System</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#posCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="posCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="pos-system">Warehouse</a></li>
+                            <li><a href="#" class="submenu-link" data-target="pos-system">Purchase</a></li>
+                            <li><a href="#" class="submenu-link" data-target="pos-system">Add POS</a></li>
+                            <li><a href="#" class="submenu-link" data-target="pos-system">POS</a></li>
+                            <li><a href="#" class="submenu-link" data-target="pos-system">Print Barcode</a></li>
+                            <li><a href="#" class="submenu-link" data-target="pos-system">Print Settings</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Cost of Goods Sold -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-target="cogs">
+                        <i class="bi bi-calculator-fill"></i>
+                        <span>Cost of Goods Sold</span>
+                    </a>
+                </li>
+
+                <!-- Settings -->
+                <li class="nav-item">
+                    <div class="nav-link-wrapper">
+                        <a href="javascript:void(0)" class="nav-link" data-target="settings">
+                            <i class="bi bi-sliders"></i>
+                            <span>Settings</span>
+                        </a>
+                        <button class="submenu-toggle" data-bs-toggle="collapse" data-bs-target="#settingsCollapse">
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="settingsCollapse">
+                        <ul class="submenu">
+                            <li><a href="#" class="submenu-link" data-target="settings">System Settings</a></li>
+                            <li><a href="#" class="submenu-link" data-target="settings">Setup Subscription Plan</a></li>
+                        </ul>
+                    </div>
+                </li>
+
                 <li class="nav-item mt-auto">
                     <a href="#" class="nav-link">
                         <i class="bi bi-box-arrow-right"></i>
@@ -127,6 +296,8 @@
             </ul>
         </nav>
     </aside>
+    
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <!-- Main Content -->
     <main class="main-wrapper">
@@ -346,8 +517,408 @@
                     </div>
                 </div>
             </section>
+
+            <!-- HRM System Section -->
+            <section id="hrm-system" class="content-section">
+                <div class="section-header">
+                    <h2>Human Resource Management</h2>
+                    <p>Manage employees, payroll, and attendance with ease.</p>
+                </div>
+                <div class="hrm-overview-grid">
+                    <div class="hrm-premium-card employee" style="background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-people-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Employee Setup</h3>
+                            <p>Manage employee records, onboarding, and directory.</p>
+                            <button class="hrm-premium-btn">Manage Records</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <div class="hrm-premium-card payroll" style="background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-cash-stack"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Payroll & Salary</h3>
+                            <p>Configure salary structures and generate payslips.</p>
+                            <div class="hrm-btn-group">
+                                <button class="hrm-premium-btn sm">Set Salary</button>
+                                <button class="hrm-premium-btn sm">Payslip</button>
+                            </div>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <div class="hrm-premium-card attendance" style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-calendar-check-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Attendance</h3>
+                            <p>Track daily attendance and manage leave requests.</p>
+                            <div class="hrm-btn-group">
+                                <button class="hrm-premium-btn sm">Leave</button>
+                                <button class="hrm-premium-btn sm">Attendance</button>
+                            </div>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <div class="hrm-premium-card setup" style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-gear-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>System Setup</h3>
+                            <p>Global HRM configurations and policy settings.</p>
+                            <button class="hrm-premium-btn">Configure</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Production Section -->
+            <section id="production" class="content-section">
+                <div class="section-header">
+                    <h2>Production Overview</h2>
+                    <p>Track and manage your manufacturing or service orders.</p>
+                </div>
+                <div class="production-grid">
+                    <div class="prod-card orders">
+                        <div class="prod-card-bg"></div>
+                        <div class="prod-card-body">
+                            <i class="bi bi-cart4"></i>
+                            <h3>Production Orders</h3>
+                            <p>Track manufacturing and service orders.</p>
+                            <button class="prod-btn">Manage Orders</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Management Section -->
+            <section id="user-management" class="content-section">
+                <div class="section-header">
+                    <h2>User & Access Control</h2>
+                    <p>Manage platform users, roles, and security logs.</p>
+                </div>
+                <div class="user-management-panel">
+                    <div class="user-mgmt-grid">
+                        <div class="hrm-premium-card user" style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);">
+                            <div class="hrm-card-icon-large"><i class="bi bi-person-circle"></i></div>
+                            <div class="hrm-card-content">
+                                <h3>User</h3>
+                                <p>Manage user accounts and details.</p>
+                                <button class="hrm-premium-btn">Manage</button>
+                            </div>
+                            <div class="hrm-card-shape"></div>
+                        </div>
+                        <div class="hrm-premium-card user" style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);">
+                            <div class="hrm-card-icon-large"><i class="bi bi-journal-text"></i></div>
+                            <div class="hrm-card-content">
+                                <h3>User Logs</h3>
+                                <p>View user activity and system logs.</p>
+                                <button class="hrm-premium-btn">View</button>
+                            </div>
+                            <div class="hrm-card-shape"></div>
+                        </div>
+                        <div class="hrm-premium-card user" style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);">
+                            <div class="hrm-card-icon-large"><i class="bi bi-shield-lock"></i></div>
+                            <div class="hrm-card-content">
+                                <h3>Role</h3>
+                                <p>Configure user roles and permissions.</p>
+                                <button class="hrm-premium-btn">Configure</button>
+                            </div>
+                            <div class="hrm-card-shape"></div>
+                        </div>
+                        <div class="hrm-premium-card user" style="background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);">
+                            <div class="hrm-card-icon-large"><i class="bi bi-building"></i></div>
+                            <div class="hrm-card-content">
+                                <h3>Client</h3>
+                                <p>Manage enterprise client records.</p>
+                                <button class="hrm-premium-btn">Manage</button>
+                            </div>
+                            <div class="hrm-card-shape"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Production System Section -->
+            <section id="production-system" class="content-section">
+                <div class="section-header">
+                    <h2>Production Assets</h2>
+                    <p>Inventory management for products and services.</p>
+                </div>
+                <div class="user-mgmt-grid mt-4">
+                    <div class="hrm-premium-card prod" style="background: linear-gradient(135deg, #ccfbff 0%, #ef96ff 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-box-seam"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Products</h3>
+                            <p>Manage catalog and pricing.</p>
+                            <button class="hrm-premium-btn">Inventory</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card prod" style="background: linear-gradient(135deg, #f0ff00 0%, #58cffb 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-layers-half"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Stock</h3>
+                            <p>Real-time warehouse tracking.</p>
+                            <button class="hrm-premium-btn">Stock Logs</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POS System Section -->
+            <section id="pos-system" class="content-section">
+                <div class="section-header">
+                    <h2>Point of Sale</h2>
+                    <p>Retail operations and transaction management.</p>
+                </div>
+                <div class="user-mgmt-grid mt-4">
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-house-door-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Warehouse</h3>
+                            <p>Manage storage locations.</p>
+                            <button class="hrm-premium-btn">Select</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-bag-plus-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Purchase</h3>
+                            <p>Restock and inventory buy.</p>
+                            <button class="hrm-premium-btn">Restock</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-plus-square-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Add POS</h3>
+                            <p>Deploy new terminals.</p>
+                            <button class="hrm-premium-btn">New</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-display-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>POS Terminal</h3>
+                            <p>Launch sales interface.</p>
+                            <button class="hrm-premium-btn">Open</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-upc-scan"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Barcode</h3>
+                            <p>Print labels and codes.</p>
+                            <button class="hrm-premium-btn">Print</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card pos" style="background: linear-gradient(135deg, #e0c3fc 8%, #8ec5fc 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-printer-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Printer</h3>
+                            <p>Configure print settings.</p>
+                            <button class="hrm-premium-btn">Configure</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h2>Core Settings</h2>
+                    <p>System configuration and subscription management.</p>
+                </div>
+                <div class="user-mgmt-grid mt-4">
+                    <div class="hrm-premium-card settings" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-gear-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>System Settings</h3>
+                            <p>Global app configurations.</p>
+                            <button class="hrm-premium-btn">Configure</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                    <div class="hrm-premium-card settings" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
+                        <div class="hrm-card-icon-large"><i class="bi bi-credit-card-2-front"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Subscription</h3>
+                            <p>Manage pricing plans.</p>
+                            <button class="hrm-premium-btn">Manage</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Create Catalog Section -->
+            <section id="create-catalog" class="content-section">
+                <div class="section-header">
+                    <h2>Create New Catalog</h2>
+                    <p>Configure your product catalog display and settings.</p>
+                </div>
+                
+                <div class="catalog-builder-container">
+                    <div class="catalog-form-card">
+                        <!-- Category Selection -->
+                        <div class="catalog-form-group">
+                            <label class="group-label">Select Categories</label>
+                            <div class="category-selection-list">
+                                <div class="category-item">
+                                    <div class="cat-info">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        <span>Sportswear</span>
+                                    </div>
+                                    <input type="checkbox" class="form-check-input">
+                                </div>
+                                <div class="category-item">
+                                    <div class="cat-info">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        <span>Fitness wear</span>
+                                    </div>
+                                    <input type="checkbox" class="form-check-input">
+                                </div>
+                                <div class="category-item">
+                                    <div class="cat-info">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        <span>Dummy Income Category</span>
+                                    </div>
+                                    <input type="checkbox" class="form-check-input">
+                                </div>
+                                <div class="category-item">
+                                    <div class="cat-info">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        <span>Dummy Expense Category</span>
+                                    </div>
+                                    <input type="checkbox" class="form-check-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image Uploads -->
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <div class="catalog-form-group">
+                                    <label class="form-label">First Page Image</label>
+                                    <div class="custom-file-upload">
+                                        <input type="file" id="firstPageImg" hidden>
+                                        <label for="firstPageImg" class="upload-box">
+                                            <i class="bi bi-image"></i>
+                                            <span>Choose Image</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="catalog-form-group">
+                                    <label class="form-label">Contact Us Image</label>
+                                    <div class="custom-file-upload">
+                                        <input type="file" id="contactPageImg" hidden>
+                                        <label for="contactPageImg" class="upload-box">
+                                            <i class="bi bi-telephone-plus"></i>
+                                            <span>Choose Image</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Type -->
+                        <div class="catalog-form-group mt-4">
+                            <label class="form-label">Company Profile Type</label>
+                            <div class="profile-type-toggle">
+                                <input type="radio" name="profileType" id="typeText" checked hidden>
+                                <label for="typeText" class="type-btn">Text</label>
+                                <input type="radio" name="profileType" id="typeImage" hidden>
+                                <label for="typeImage" class="type-btn">Image</label>
+                            </div>
+                        </div>
+
+                        <!-- Profile Content -->
+                        <div class="catalog-form-group mt-3">
+                            <label class="form-label">Company Profile (Text)</label>
+                            <textarea class="form-control" rows="4" placeholder="Write company profile..."></textarea>
+                        </div>
+
+                        <!-- Toggles -->
+                        <div class="catalog-switches mt-4">
+                            <div class="form-check form-switch custom-switch">
+                                <input class="form-check-input" type="checkbox" id="includePrices" checked>
+                                <label class="form-check-label" for="includePrices">Include Prices in Catalog</label>
+                            </div>
+                            <div class="form-check form-switch custom-switch">
+                                <input class="form-check-input" type="checkbox" id="includeDesc" checked>
+                                <label class="form-check-label" for="includeDesc">Include Description in Catalog</label>
+                            </div>
+                            <div class="form-check form-switch custom-switch">
+                                <input class="form-check-input" type="checkbox" id="includeSKU" checked>
+                                <label class="form-check-label" for="includeSKU">Include SKU in Catalog</label>
+                            </div>
+                        </div>
+
+                        <!-- Action Button -->
+                        <button class="btn btn-primary w-100 mt-4 py-3 rounded-pill fw-bold">
+                            Create Catalog <i class="bi bi-plus-circle-fill ms-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Live Preview Panel (Modern Touch) -->
+                    <div class="catalog-preview-card">
+                        <div class="preview-header">
+                            <span>Catalog Preview</span>
+                            <div class="preview-badge">Live</div>
+                        </div>
+                        <div class="preview-mockup">
+                            <div class="mockup-page">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-content">
+                                    <div class="mockup-img-placeholder"></div>
+                                    <div class="mockup-text-skeleton"></div>
+                                    <div class="mockup-text-skeleton sm"></div>
+                                    <div class="mockup-grid-skeleton">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cost of Goods Sold Section -->
+            <section id="cogs" class="content-section">
+                <div class="section-header">
+                    <h2>COGS Analysis</h2>
+                    <p>Detailed breakdown of your cost of goods sold.</p>
+                </div>
+                <div class="cogs-analysis">
+                    <div class="cogs-card main">
+                        <div class="cogs-header">
+                            <span>Current Period</span>
+                            <h3>$142,500.00</h3>
+                        </div>
+                        <div class="cogs-chart-placeholder">
+                            <!-- Visual representation of costs -->
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </main>
+        </main>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

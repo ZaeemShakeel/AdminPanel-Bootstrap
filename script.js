@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const toggleBtn = document.getElementById('toggle-sidebar');
     const mobileToggleBtn = document.getElementById('mobile-toggle');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
     const navLinks = document.querySelectorAll('.nav-link[data-target], .submenu-link[data-target]');
     const sections = document.querySelectorAll('.content-section');
 
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleBtn.addEventListener('click', toggleSidebar);
     if (mobileToggleBtn) {
         mobileToggleBtn.addEventListener('click', toggleSidebar);
+    }
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', toggleSidebar);
     }
 
     // Content Switching
@@ -50,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Submenu handling is now primarily managed by Bootstrap data attributes and CSS transitions
 
     // Add animation to cards on scroll or load
-    const cards = document.querySelectorAll('.web-setting-card, .account-card, .stat-card');
+    const cards = document.querySelectorAll('.web-setting-card, .account-card, .stat-card, .hrm-card, .order-status-card, .user-card, .prod-box, .pos-item, .setting-row, .catalog-builder-box, .cogs-card, .hrm-setup-card, .mgmt-item, .asset-tile, .pos-action-card, .active-warehouse-card, .p-link');
     const observerOptions = {
         threshold: 0.1
     };
