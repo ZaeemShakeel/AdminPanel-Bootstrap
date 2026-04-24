@@ -1520,6 +1520,113 @@ input[name="profileType"]:checked + .type-btn {
     z-index: 1;
 }
 
+/* Dashboard Nav Cards Specifics */
+.dash-nav-card {
+    height: 250px; /* Vertical height */
+    display: flex;
+    flex-direction: column; /* Back to vertical for 4-in-a-row */
+    justify-content: space-between;
+    align-items: flex-start; /* Left aligned like sidebar */
+    padding: 1.5rem;
+    border: 2px solid transparent;
+}
+
+.dash-nav-card .hrm-card-icon-large {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+.dash-nav-card .hrm-card-content {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.dash-nav-card .hrm-card-content h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.15rem;
+}
+
+.dash-nav-card .hrm-card-content p {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+.dash-nav-card:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.dash-nav-card .hrm-premium-btn {
+    pointer-events: none;
+    width: 100%; /* Full width button looks good in 4-col */
+    text-align: center;
+}
+
+.dash-nav-card:hover .hrm-premium-btn {
+    background: #0f172a;
+    color: white;
+}
+
+/* Dashboard Header Banner (Compact) */
+.dash-header-banner {
+    width: 400px;
+    height: 100px !important;
+    padding: 1.5rem 2rem !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2) !important;
+}
+
+.banner-content h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 2px !important;
+    font-weight: 700;
+}
+
+.banner-content p {
+    font-size: 0.85rem !important;
+    margin-bottom: 0 !important;
+    opacity: 0.8;
+}
+
+.banner-icon {
+    font-size: 2.5rem;
+    opacity: 0.3;
+    transform: rotate(15deg);
+}
+
+/* Adjust grid for 4 horizontal cards in dashboard */
+#dashboard .hrm-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    #dashboard .hrm-overview-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .dashboard-top-row {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1.5rem;
+    }
+    .dash-header-banner {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #dashboard .hrm-overview-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
 /* ==========================================================================
    USER MANAGEMENT PANEL
    ========================================================================== */

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('toggle-sidebar');
     const mobileToggleBtn = document.getElementById('mobile-toggle');
     const sidebarOverlay = document.getElementById('sidebar-overlay');
-    const navLinks = document.querySelectorAll('.nav-link[data-target], .submenu-link[data-target]');
+    const navLinks = document.querySelectorAll('.nav-link[data-target], .submenu-link[data-target], .dash-nav-card[data-target]');
     const sections = document.querySelectorAll('.content-section');
 
     // Sidebar Toggle Function
@@ -36,11 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.forEach(l => l.classList.remove('active'));
                 sections.forEach(s => s.classList.remove('active'));
 
-                // Add active class to current link and target section
+                // Add active class to current link
                 link.classList.add('active');
+
+                // Sync sidebar link if this was a dashboard card click
+                if (link.classList.contains('dash-nav-card')) {
+                    const sidebarLink = document.querySelector(`.sidebar-nav .nav-link[data-target="${targetId}"], .sidebar-nav .submenu-link[data-target="${targetId}"]`);
+                    if (sidebarLink) {
+                        sidebarLink.classList.add('active');
+                    }
+                }
+
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.classList.add('active');
+                    // Scroll to top of content
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
 
                 // Close sidebar on mobile after selection
@@ -54,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Submenu handling is now primarily managed by Bootstrap data attributes and CSS transitions
 
     // Add animation to cards on scroll or load
-    const cards = document.querySelectorAll('.web-setting-card, .account-card, .stat-card, .hrm-card, .order-status-card, .user-card, .prod-box, .pos-item, .setting-row, .catalog-builder-box, .cogs-card, .hrm-setup-card, .mgmt-item, .asset-tile, .pos-action-card, .active-warehouse-card, .p-link');
+    const cards = document.querySelectorAll('.web-setting-card, .account-card, .stat-card, .hrm-card, .order-status-card, .user-card, .prod-box, .pos-item, .setting-row, .catalog-builder-box, .cogs-card, .hrm-setup-card, .mgmt-item, .asset-tile, .pos-action-card, .active-warehouse-card, .p-link, .dash-nav-card');
     const observerOptions = {
         threshold: 0.1
     };

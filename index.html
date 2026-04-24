@@ -325,47 +325,130 @@
         <div class="content-container">
             <!-- Dashboard Overview (Default) -->
             <section id="dashboard" class="content-section active">
-                <div class="welcome-banner">
-                    <h1>Welcome back, Admin! 👋</h1>
-                    <p>Here's what's happening with your platform today.</p>
+                <div class="dashboard-top-row d-flex justify-content-between align-items-center mb-5">
+                    <div class="section-header mb-0">
+                        <h2 class="fw-bold">Quick Access Modules</h2>
+                        <p class="text-secondary">Direct links to all major management systems.</p>
+                    </div>
+                    
+                    <div class="welcome-banner dash-header-banner">
+                        <div class="banner-content">
+                            <h3>Welcome back, Admin! 👋</h3>
+                            <p>Here's your platform overview.</p>
+                        </div>
+                        <i class="bi bi-rocket-takeoff banner-icon"></i>
+                    </div>
                 </div>
-                
-                <div class="row g-4 mt-2">
-                    <div class="col-md-3">
-                        <div class="stat-card">
-                            <div class="icon-box blue"><i class="bi bi-people"></i></div>
-                            <div class="stat-info">
-                                <h3>1,284</h3>
-                                <p>Total Users</p>
-                            </div>
+
+                <div class="hrm-overview-grid">
+                    <!-- 1. HRM System -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="hrm-system" style="background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-people-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>HRM System</h3>
+                            <p>Manage employees, payroll, and attendance.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
                         </div>
+                        <div class="hrm-card-shape"></div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
-                            <div class="icon-box purple"><i class="bi bi-bag-check"></i></div>
-                            <div class="stat-info">
-                                <h3>$45,210</h3>
-                                <p>Total Revenue</p>
-                            </div>
+
+                    <!-- 2. Production -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="production" style="background: linear-gradient(135deg, #A1C4FD 0%, #C2E9FB 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-box-seam-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Production</h3>
+                            <p>Track manufacturing and service orders.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
                         </div>
+                        <div class="hrm-card-shape"></div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
-                            <div class="icon-box green"><i class="bi bi-graph-up-arrow"></i></div>
-                            <div class="stat-info">
-                                <h3>+12.5%</h3>
-                                <p>Growth Rate</p>
-                            </div>
+
+                    <!-- 3. Create Catalog -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="create-catalog" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-journal-plus"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Create Catalog</h3>
+                            <p>Build and configure product catalogs.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
                         </div>
+                        <div class="hrm-card-shape"></div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
-                            <div class="icon-box orange"><i class="bi bi-chat-dots"></i></div>
-                            <div class="stat-info">
-                                <h3>86</h3>
-                                <p>New Inquiries</p>
-                            </div>
+
+                    <!-- 4. Website Settings -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="website-settings" style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-gear-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Website Settings</h3>
+                            <p>Configure theme, SEO, and site content.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
                         </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 5. User Management -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="user-management" style="background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-person-gear"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>User Management</h3>
+                            <p>Control access, roles, and security logs.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 6. Production System -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="production-system" style="background: linear-gradient(135deg, #ccfbff 0%, #ef96ff 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-cpu-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Production System</h3>
+                            <p>Inventory for products and services.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 7. Accounts -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="accounts-overview" style="background: linear-gradient(135deg, #f0ff00 0%, #58cffb 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-wallet2"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Accounts</h3>
+                            <p>Financial management and cash flow.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 8. POS System -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="pos-system" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-cart-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>POS System</h3>
+                            <p>Retail operations and transactions.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 9. Cost of Goods Sold -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="cogs" style="background: linear-gradient(135deg, #434343 0%, #000000 100%); cursor: pointer; color: white;">
+                        <div class="hrm-card-icon-large" style="color: rgba(255,255,255,0.7)"><i class="bi bi-calculator-fill"></i></div>
+                        <div class="hrm-card-content">
+                            <h3 style="color: white;">Cost of Goods Sold</h3>
+                            <p style="color: rgba(255,255,255,0.8)">Track costs and profit margins.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
+                    </div>
+
+                    <!-- 10. Settings -->
+                    <div class="hrm-premium-card dash-nav-card" data-target="settings" style="background: linear-gradient(135deg, #e0c3fc 8%, #8ec5fc 100%); cursor: pointer;">
+                        <div class="hrm-card-icon-large"><i class="bi bi-sliders"></i></div>
+                        <div class="hrm-card-content">
+                            <h3>Settings</h3>
+                            <p>Core configurations and subscriptions.</p>
+                            <button class="hrm-premium-btn">Open Module</button>
+                        </div>
+                        <div class="hrm-card-shape"></div>
                     </div>
                 </div>
             </section>
